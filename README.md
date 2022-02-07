@@ -1,23 +1,22 @@
 # streeter
 
+### ⚠️注意
+1.本程序的工作原理是先通过输入的地址获取经纬度，然后再周边搜索最近的街道办事处，因此搜索结果不保证准确，也不保证一定有搜索结果！
+2.仅限查询中国地区的街道
+
 #### 介绍
 利用高德地图api通过地址获取所属街道办
 
-#### 软件架构
-软件架构说明
-
-
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.pip安装requests, jieba
+2.下载仓库中的streeter.py
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.请在streeter.py顶部KEY和CITY变量处填写能够访问高德地图webapi的key和所属城市（省级及以下，市级及以上即可）
+2.以任意方式调用streeter中的get_streeter，函数会返回一个列表包含可能的结果(1~3个)，大多数情况下列表只会包含一个结果，当有多个结果时一般第一个是正确结果
+3.每次查询大概需要1s，主要用于jieba分词来从地址中组合街道名（首先编程水平也是）
 
 #### 参与贡献
 
@@ -25,13 +24,3 @@
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
